@@ -1,0 +1,47 @@
+.footer {
+    padding: 60px 0;
+    background: $footer-bg;
+    @include mediaTablet{
+        padding: 30px 0;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        @include mediaTablet{
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 40px;
+            margin: 0 auto;
+        }
+    }
+
+    &__nav {
+        &-list {
+            display: grid;
+            gap: 15px;
+            &-icon {
+                display: flex;
+                column-gap: 22px;
+                align-items: center;
+                margin-top: 20px;
+            }
+        }
+
+        &-item {
+            .mail {
+                color: $accent;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.7px;
+            }
+        }
+
+        &-link {
+            
+        }
+    }
+}

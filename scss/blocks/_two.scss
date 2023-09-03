@@ -1,0 +1,74 @@
+.visually-hidden{
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+
+    position: absolute;
+    
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+}
+
+.two {
+    padding: 120px 0;
+    position: relative;
+    // убираем скролл из за цифры на фоне
+    overflow: hidden;
+
+    // Декор элемент
+    &::after{
+        content: "II";
+        // 50% - это половина экрана
+        // 555 - это полвина контейнра 1110
+        left: calc(50% + 555px);
+        transform: translate(-50%, 0%);
+        // ДОБАВЛЕНИЕ МИКСИНА
+        @include decorNumber;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        align-items: center;
+        text-align: center;
+
+        @include mediaTablet{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            // grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 53px;
+        @include mediaTablet{
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 27px;
+        @include mediaTablet{
+            font-size: 16px;
+        }
+    }
+
+    &__bg{
+        // z-index: -1;
+        position: absolute;
+        right: 100px;
+        top: 120px;
+    }
+}

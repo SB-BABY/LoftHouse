@@ -1,0 +1,52 @@
+// Подключаем из других файлов стили
+// MIXINS
+@import "./base/mixins";
+// MIXINS
+
+// Base - Порядок такой: Сбросили -> Определили переменные -> Используем переменные в проекте
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+// Base
+
+// NAV
+@import "./blocks/nav";
+@import "./blocks/nav-icon";
+// NAV
+
+// HEADER
+@import "./blocks/header";
+
+// HEADER
+
+// TWO
+@import "./blocks/two";
+// TWO
+
+// APPART
+@import "./blocks/appart";
+// APPART
+
+// WATCH
+@import "./blocks/watch";
+// WATCH
+
+// FORM
+@import "./blocks/form";
+// FORM
+
+// VIDEO
+@import "./blocks/video";
+// VIDEO
+
+// MAP
+@import "./blocks/map";
+// MAP
+
+// FEED
+@import "./blocks/feed";
+// FEED
+
+// FOOTER
+@import "./blocks/footer";
+// FOOTER

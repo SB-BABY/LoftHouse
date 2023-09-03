@@ -1,0 +1,48 @@
+// ШРИФТЫ
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
+// ШРИФТЫ
+
+// СТАНДАРТНЫЕ СТИЛИ ДЛЯ КОНКРЕТНОГО МАКЕТА
+body {
+    font-family: $font-main;
+    background-color: $dark;
+    color: $white;
+    // Стараться искать абзац целый и от него писать стандартный шрифт
+    font-size: 16px;
+}
+
+a {
+    color: $white;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+        color: $accent;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1140px;
+}
+
+.none {
+    display: none !important;
+}
+
+.title-2 {
+    color: $accent;
+    font-family: $font-accent;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @include mediaTablet{
+        font-size: 28px;
+    }
+}
+
+.no-scroll{
+    overflow-y: hidden;
+}
+// СТАНДАРТНЫЕ СТИЛИ ДЛЯ КОНКРЕТНОГО МАКЕТА
